@@ -37,7 +37,7 @@ class StoresController < ApplicationController
   def update
     @store = Store.find(params[:id])
     if @store.update(store_params)
-      redirect_to root_path, notice: 'Store was successfully updated'
+      redirect_to store_path(@store), notice: 'Store was successfully updated'
     else
       render :edit
     end
@@ -47,7 +47,7 @@ class StoresController < ApplicationController
     @store = Store.find(params[:id])
     if @store.destroy
       flash[:notice] = "Store has been removed"
-      redirect_to root_path
+      redirect_to stores_path
     else
       redirect_to store_path(@store), notice: 'This store was not deleted'
     end
