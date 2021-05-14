@@ -1,0 +1,2 @@
+<%= render partial: 'stores/form', locals: {model: @store, url: store_url(@store), verb: :patch} %>
+<%= link_to "Delete this store", store_path(@store), method: :delete, data: { confirm: "Are you sure you wish to delete your store?" }  %>
