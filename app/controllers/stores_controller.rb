@@ -55,7 +55,7 @@ class StoresController < ApplicationController
 
   private 
 
-  def project_params
+  def store_params
 
     params.require(:store).permit(
       :name, 
