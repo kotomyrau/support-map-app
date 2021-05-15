@@ -1,3 +1,11 @@
 <h1>homepage</h1>
 
 <%= link_to "Stores Map", stores_path %>
+
+<%# <%= link_to "View your profile", user_path(@user.id) %> %>
+
+<% if user_signed_in? %>
+  <%= link_to "Log out", destroy_user_session_path, method: :delete  %>
+<% else %>
+  <%= link_to "Sign In",  new_user_session_path %>
+<% end %>
