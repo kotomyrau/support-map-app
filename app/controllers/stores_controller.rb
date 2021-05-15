@@ -1,5 +1,4 @@
 class StoresController < ApplicationController
-  # before_action :require_login, except: [:index]
 
   def index
     @stores = Store.all
