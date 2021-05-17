@@ -1,5 +1,17 @@
-<h1>User Profile Page </h1>
 
 <% if current_user == @profile_user %>
-  <%= link_to "Edit Profile",  edit_user_registration_path(@user) %>
+
+  <h1> My Profile </h1>
+  <p><%= @profile_user.first_name %> </p>
+<% if @profile_user.profile_photo.attached? %>
+  <%= cl_image_tag @profile_picture.key %>
+<% end %>
+
+  
+  <%= link_to "Edit Profile",  edit_user_registration_path %>
+
+<% else %>
+
+  <h1><%= @profile_user.first_name %>'s Profile Page </h1>
+
 <% end %>
