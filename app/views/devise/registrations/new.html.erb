@@ -4,13 +4,13 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-
-  <div class="field">
-    <%= f.label "Profile Picture" %> <br/>
-    <%= f.input :profile_photo, 
-                as: :file, 
-                required: false %>
-  </div>
+    <div class="field">
+      <% if resource.avatar.attached? %>
+        <%= image_tag(resource.avatar) %>
+      <% else %>
+        <%= image_tag("/default-pp.jpg") %>
+      <% end %>    
+    </div>
     
     <div class="field">
       <%= f.label "Username" %> <br/>

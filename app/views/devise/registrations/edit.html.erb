@@ -12,7 +12,11 @@
 
   <div class="field">
     <%= f.label "Profile Picture" %> <br/>
-    <%= f.input :profile_photo, label: "Update Profile Picture:", as: :file, id: "file-button"%>
+    <%= image_tag(resource.avatar_thumbnail) if resource.avatar.attached? %>
+    <%# <%= f.input :avatar, label: "Update Profile Picture:", as: :file, id: "file-button"%> 
+  </div>
+  <div class="field">
+    <%= f.file_field :avatar %>
   </div>
 
     <%= f.input :password,

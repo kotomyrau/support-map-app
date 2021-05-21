@@ -3,10 +3,7 @@
 
   <h1> My Profile </h1>
   <p><%= @profile_user.first_name %> </p>
-<% if @profile_user.profile_photo.attached? %>
-  <%= cl_image_tag @profile_picture.key %>
-<% end %>
-
+  <%= image_tag(current_user.avatar_thumbnail)%>
   
   <%= link_to "Edit Profile",  edit_user_registration_path %>
 
