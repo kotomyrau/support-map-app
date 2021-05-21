@@ -10,15 +10,12 @@
       <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
 
-  <div class="field">
-    <%= f.label "Profile Picture" %> <br/>
-    <%= image_tag(resource.avatar_thumbnail) if resource.avatar.attached? %>
-    <%# <%= f.input :avatar, label: "Update Profile Picture:", as: :file, id: "file-button"%> 
-  </div>
-  <div class="field">
-    <%= f.file_field :avatar %>
-  </div>
-
+    <%# AVATAR  %>
+    <div class="field">
+      <%= f.file_field :avatar,
+                        required: false %>
+    </div>
+    
     <%= f.input :password,
                 hint: "leave it blank if you don't want to change it",
                 required: false,
