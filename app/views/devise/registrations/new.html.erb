@@ -7,14 +7,16 @@
 
   <div class="field">
     <%= f.label "Profile Picture" %> <br/>
-    <%= f.input :profile_photo, label: "Update Profile Picture:", as: :file, id: "file-button"%>
+    <%= f.input :profile_photo, 
+                as: :file, 
+                required: false %>
   </div>
     
     <div class="field">
       <%= f.label "Username" %> <br/>
       <%= f.input :username,
                   required: true,
-                  autofocus: false,
+                  autofocus: true,
                   input_html: { autocomplete: "username" }%>
     </div>
 
@@ -39,7 +41,7 @@
 
     <%= f.input :email,
                 required: true,
-                autofocus: true,
+                autofocus: false,
                 input_html: { autocomplete: "email" }%>
     <%= f.input :password,
                 required: true,
