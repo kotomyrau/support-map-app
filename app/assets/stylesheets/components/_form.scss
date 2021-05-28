@@ -1,23 +1,78 @@
 form {
+	display: block;
 	height: auto;
 	margin: auto;
-	display: block;
-	width: fit-content;
+	padding: 4vw 4vh;
 	text-align: center;
+	width: 100%;
 }
 
-.form-inputs {
-	display: inline-block;
+.form-title {
+	text-transform: uppercase;
+}
+
+// Asterisk for required fields
+abbr {
+	text-decoration: none;
+}
+
+.form-field {
+	margin: 4vh 4px 0;
 }
 
 input {
-	border: 1px solid black;
-	border-radius: 50px;
-	padding: 8px 24px;
-	font-size: 12px;
+	background: transparent;
+	border: none;
+	border-bottom: 0.5px solid #f8fbfa;
+	font-size: 16px;
+	height: auto;
+	letter-spacing: 1px;
+	line-height: 32px;
 	outline: none;
-	margin: 4vh;
+	padding: 8px 24px;
+	width: 100%;
 }
-.form-field {
-	font-size: 20px;
+
+// FORM BUTTON
+.form-actions input {
+	border: none;
+	background-color: #f8fbfa;
+	margin: 4vh 0;
+	cursor: pointer;
+	border-radius: 50px;
+}
+.form-actions input:hover {
+	background-color: #f57452;
+	color: #f8fbfa;
+	transition: ease-in-out 0.2s;
+}
+
+// FORM LINKS
+.form-links {
+	a {
+		text-decoration: none;
+		color: #2f3537;
+	}
+	a:hover {
+		color: #2f3537;
+		font-weight: bold;
+	}
+}
+
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px #f8fbfa inset;
+}
+
+.form-alerts {
+	// background-color: #f57452;
+	margin: 4vh auto;
+	background-color: #f57452;
+	height: auto;
+	line-height: 10vh;
+	border-radius: 2px;
+	width: fit-content;
+}
+
+.alert {
+	margin: 0 8px;
 }
