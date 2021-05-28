@@ -4,4 +4,11 @@ class AdminsController < ApplicationController
   def index
     @admins = Admin.all
   end
+
+  private
+
+  def admin_params
+    params.require(:admin).permit(:admin_mode)
+  end
+
 end

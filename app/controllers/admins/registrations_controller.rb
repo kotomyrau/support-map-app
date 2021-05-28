@@ -12,7 +12,7 @@ class Admins::RegistrationsController < Devise::RegistrationsController
       if user_signed_in?
         redirect_to admins_path
       else
-        redirect_to new_admin_registration_path
+        redirect_to new_admin_session_path
       end
     end
   end

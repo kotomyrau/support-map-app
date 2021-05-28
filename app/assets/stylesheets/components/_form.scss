@@ -1,0 +1,23 @@
+form {
+	height: auto;
+	margin: auto;
+	display: block;
+	width: fit-content;
+	text-align: center;
+}
+
+.form-inputs {
+	display: inline-block;
+}
+
+input {
+	border: 1px solid black;
+	border-radius: 50px;
+	padding: 8px 24px;
+	font-size: 12px;
+	outline: none;
+	margin: 4vh;
+}
+.form-field {
+	font-size: 20px;
+}
