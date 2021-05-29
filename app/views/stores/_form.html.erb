@@ -1,18 +1,59 @@
-<%= simple_form_for model, method: verb, url: url do |f| %>
+<div class="form-container">
+  <%= simple_form_for model, method: verb, url: url do |f| %>
     <div class="form-inputs">
-        <%= f.error_notification %>
-        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-          <%= f.input :name, label: "Name of Store"%> 
-          <%= f.input :bio, label: "About your store", input_html: {rows: 4} %>
-          <%= f.input :category, label: "Type of Store", collection: Store::CATEGORY%>
-          <%= f.input :address, label: "Store Address"%>
-          <%= f.input :website, label: "Store Website"%>
-          <%= f.input :telephone, label: "telephone"%>
-          <%= f.input :price_range, label: "price range"%>
-    </div>
-    <div class="form-actions">
-        <div class="form-button">
-            <%= f.button :submit %>
-        </div>
+      <div class="form-title">
+        <h6>add new business</h6>
+      </div>
+      <div class="form-info">
+        <p>Once submitted, the business will appear on the map.</p>
+      </div>
+
+      <%= f.error_notification %>
+      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+       <%= f.input :store_image, label: "Cover Image", as: :file %> 
+       <%= f.file_field :store_images, as: :file, multiple: true%>
+      <div class="form-field">
+        <%= f.input :name, 
+                    label: "Name of Store",
+                    required: true,
+                    autofocus: true %> 
+      </div>
+      <div class="form-field">
+        <%= f.input :bio, 
+                    label: "About your store",
+                    required: true,
+                    input_html: {rows: 4} %>
+      </div>
+      <div class="form-field">
+        <%= f.input :category, 
+                    label: "Type of Store", 
+                    required: true, 
+                    collection: Store::CATEGORY %>
+      </div>
+      <div class="form-field">
+        <%= f.input :address, 
+                    label: "Store Address",
+                    required: true %>
+      </div>
+      <div class="form-field">
+        <%= f.input :website, 
+                    label: "Store Website",
+                    required: false %>
+      </div>
+      <div class="form-field">
+        <%= f.input :telephone, 
+                    label: "telephone",
+                    required: false %>
+      </div>
+      <div class="form-field">
+        <%= f.input :price_range, 
+                    label: "price range",
+                    required: true %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "add business" %>
+      </div>
     <% end %>
+  </div>
 </div>

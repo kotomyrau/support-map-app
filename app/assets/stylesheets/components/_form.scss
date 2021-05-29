@@ -20,7 +20,9 @@ abbr {
 	margin: 4vh 4px 0;
 }
 
-input {
+input,
+textarea,
+select {
 	background: transparent;
 	border: none;
 	border-bottom: 0.5px solid #f8fbfa;
@@ -75,4 +77,8 @@ input:-webkit-autofill {
 
 .alert {
 	margin: 0 8px;
+}
+
+label {
+	display: block;
 }
