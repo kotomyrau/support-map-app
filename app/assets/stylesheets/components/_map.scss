@@ -6,3 +6,19 @@
 	text-align: center;
 	font-family: "Open Sans", sans-serif;
 }
+.map-container {
+	display: grid;
+	grid-template-columns: 0.5fr 1.5fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: "info map";
+	margin: 0;
+}
+
+#map {
+	grid-area: map;
+}
+
+.info-section {
+	grid-area: info;
+	text-align: center;
+}

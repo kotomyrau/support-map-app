@@ -1,5 +1,23 @@
 @import "components/index";
 
-body {
-	margin: 0 10vw;
+h6 {
+	font-family: "Roboto", sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	font-family: "Poppins", sans-serif;
+	font-size: 12px;
+	color: #2f3537;
+}
+
+*:focus {
+	outline: none;
+}
+
+.alert {
+	font-weight: bold;
 }

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   resources :stores, path: 'stores'
   # resources :users, path:'supporters', only: [:index]
   resources :users, path:'supporters', only: [:index, :show]
-  resources :admins, path:'admin', only: [:index]
+
+  # ONLY ADMIN CAN CREATE NEW/EDIT/DELETE STORES 
+  resources :admins, path:'admin', only: :index 
 
 end
