@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   def index
     @user = current_user
     @example = User.find_by_username("John2")
